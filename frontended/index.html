@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Redistribution System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <h1>Food Redistribution System</h1>
+    <div id="login">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="password" id="password" placeholder="Password" required />
+        <button type="submit">Login</button>
+      </form>
+    </div>
+    <div id="signup" style="display: none;">
+      <h2>Signup</h2>
+      <form id="signupForm">
+        <input type="text" id="name" placeholder="Name" required />
+        <input type="email" id="emailSignup" placeholder="Email" required />
+        <input type="password" id="passwordSignup" placeholder="Password" required />
+        <select id="role">
+          <option value="Donor">Donor</option>
+          <option value="Seeker">Seeker</option>
+        </select>
+        <button type="submit">Signup</button>
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
