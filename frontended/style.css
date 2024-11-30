@@ -3,53 +3,89 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
 }
 
+/* Body Styling */
 body {
-  background-color: #f9f9f9;
+  background-color: #f4f4f9;
   color: #333;
   line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
+/* App Container */
 #app {
   max-width: 800px;
-  margin: 20px auto;
-  padding: 20px;
+  width: 100%;
   background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Heading */
+/* Headings */
 h1 {
   text-align: center;
-  margin-bottom: 20px;
   color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 2.2rem;
 }
 
 h2 {
-  margin-bottom: 10px;
   color: #34495e;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #3498db;
+  display: inline-block;
+  padding-bottom: 5px;
 }
 
-/* Buttons */
-button {
-  display: inline-block;
+/* Forms */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+form input,
+form select,
+form button {
+  padding: 12px 15px;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+form input,
+form select {
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+form input:focus,
+form select:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+form button {
   background: #3498db;
   color: #fff;
-  padding: 10px 15px;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
-  font-size: 14px;
-  transition: background 0.3s;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
 }
 
-button:hover {
+form button:hover {
   background: #2980b9;
 }
 
+/* Logout Button */
 #logoutBtn {
   float: right;
   background: #e74c3c;
@@ -59,41 +95,12 @@ button:hover {
   background: #c0392b;
 }
 
-/* Forms */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-form input,
-form select,
-form button {
-  padding: 10px;
-  font-size: 14px;
-}
-
-form input,
-form select {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 100%;
-}
-
 /* Sections */
 section {
   margin-bottom: 20px;
 }
 
-section h2 {
-  border-bottom: 2px solid #3498db;
-  display: inline-block;
-  padding-bottom: 5px;
-  margin-bottom: 15px;
-}
-
-/* Food Listings */
+/* List Styling */
 ul {
   list-style: none;
   margin-top: 10px;
@@ -103,10 +110,11 @@ ul li {
   background: #ecf0f1;
   padding: 15px;
   margin-bottom: 10px;
-  border-radius: 5px;
+  border-radius: 8px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 ul li strong {
@@ -115,4 +123,46 @@ ul li strong {
 
 ul li button {
   margin-left: 10px;
+  background: #27ae60;
+}
+
+ul li button:hover {
+  background: #1e8449;
+}
+
+/* Footer (Optional) */
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  #app {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  form button {
+    font-size: 0.9rem;
+  }
+
+  ul li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  ul li button {
+    width: 100%;
+    margin-top: 10px;
+  }
 }

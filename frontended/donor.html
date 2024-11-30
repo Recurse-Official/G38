@@ -9,23 +9,16 @@
 <body>
   <div id="app">
     <h1>Donor Dashboard</h1>
-    <button id="logoutBtn">Logout</button>
-
-    <section id="uploadFoodSection">
+    <button onclick="logout()">Logout</button>
+    <section>
       <h2>Upload Food</h2>
       <form id="uploadFoodForm">
         <input type="text" id="foodName" placeholder="Food Name" required>
-        <input type="text" id="foodType" placeholder="Food Type (e.g., Cooked, Packaged)" required>
-        <input type="date" id="expiryDate" required>
+        <input type="text" id="foodType" placeholder="Food Type" required>
         <input type="number" id="quantity" placeholder="Quantity" required>
         <input type="text" id="location" placeholder="Location" required>
-        <button type="submit">Upload Food</button>
+        <button type="submit">Upload</button>
       </form>
-    </section>
-
-    <section id="uploadedFoodsSection">
-      <h2>Uploaded Foods</h2>
-      <ul id="uploadedFoodsList"></ul>
     </section>
   </div>
   <script src="donor.js"></script>
