@@ -1,0 +1,16 @@
+# Node modules
+/node_modules
+
+# Build directories
+/build
+/dist
+
+# Environment variables file
+/.env
+
+# Logs
+*.log
+
+# npm package lock files
+package-lock.json
+yarn.lock
