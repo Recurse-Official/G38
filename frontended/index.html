@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Donation System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Role Selection -->
+        <div id="role-selection" class="container">
+            <h1>Choose Your Role</h1>
+            <button onclick="navigateTo('donor')">Donor</button>
+            <button onclick="navigateTo('receiver')">Receiver</button>
+            <button onclick="navigateTo('admin')">Admin</button>
+        </div>
+
+        <!-- Login Page -->
+        <div id="login-page" class="container hidden">
+            <h1>Login</h1>
+            <form onsubmit="return handleLogin(event)">
+                <input type="email" id="email" placeholder="Email" required />
+                <input type="password" id="password" placeholder="Password" required />
+                <button type="submit">Login</button>
+            </form>
+            <div class="footer">
+                <a href="#" onclick="alert('Register clicked!')">Register</a> | 
+                <a href="#" onclick="alert('Forgot Password clicked!')">Forgot Password?</a>
+            </div>
+        </div>
+
+        <!-- Donor Page -->
+        <div id="donor-page" class="container hidden">
+            <h1>Donor Dashboard</h1>
+            <form id="donor-form" onsubmit="uploadFood(event)">
+                <input type="text" id="food-name" placeholder="Food Name" required />
+                <input type="number" id="food-quantity" placeholder="Quantity (in kg)" required />
+                <textarea id="food-description" placeholder="Description" required></textarea>
+                <button type="submit">Upload Food</button>
+            </form>
+            <div id="upload-status"></div>
+            <button onclick="goBack()">Go Back</button>
+        </div>
+
+        <!-- Receiver Page -->
+        <div id="receiver-page" class="container hidden">
+            <h1>Available Food</h1>
+            <div id="food-list"></div>
+            <button onclick="goBack()">Go Back</button>
+        </div>
+
+        <!-- Admin Page -->
+        <div id="admin-page" class="container hidden">
+            <h1>Admin Dashboard</h1>
+            <p>Welcome to the admin's portal!</p>
+            <button onclick="goBack()">Go Back</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
